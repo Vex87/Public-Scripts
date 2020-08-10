@@ -1,0 +1,15 @@
+{
+  "name": "project",
+  "tree": {
+    "$className": "DataModel",
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterCharacterScripts": {
+        "$className": "StarterCharacterScripts",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/StarterPlayer/StarterCharacterScripts"
+      },
+      "$ignoreUnknownInstances": true
+    }
+  }
+}
