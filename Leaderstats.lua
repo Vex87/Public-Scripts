@@ -1,3 +1,6 @@
+-- ServerScriptService
+-- 08/13/20
+
 game.Players.PlayerAdded:Connect(function(p)
 	
 	local leaderstats = Instance.new("Folder")
