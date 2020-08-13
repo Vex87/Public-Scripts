@@ -41,7 +41,7 @@
 				<R21>0</R21>
 				<R22>1</R22>
 			</CoordinateFrame>
-			<SharedString name="ModelMeshData">1B2M2Y8AsgTpgAmY7PhCfg==</SharedString>
+			<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
 			<Vector3 name="ModelMeshSize">
 				<X>0</X>
 				<Y>0</Y>
@@ -817,6 +817,6 @@ end)]]></ProtectedString>
 		</Properties>
 	</Item>
 	<SharedStrings>
-		<SharedString md5="1B2M2Y8AsgTpgAmY7PhCfg=="></SharedString>
+		<SharedString md5="yuZpQdnvvUBOTYh1jqZ2cA=="></SharedString>
 	</SharedStrings>
 </roblox>
