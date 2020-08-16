@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Model" referent="RBX814D1CE8E6AF487A9C5D83A7DA9224A7">
+	<Item class="Model" referent="RBX983C93CD897F437CB6234BD508871CEF">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<token name="LevelOfDetail">0</token>
@@ -44,7 +44,7 @@
 			<Ref name="PrimaryPart">null</Ref>
 			<BinaryString name="Tags"></BinaryString>
 		</Properties>
-		<Item class="Model" referent="RBXFFEA27954C19439F90308E04279FF301">
+		<Item class="Model" referent="RBX37D9DD2CB30D4C9595D0FD6A82387A6D">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<token name="LevelOfDetail">0</token>
@@ -86,13 +86,13 @@
 				<Ref name="PrimaryPart">null</Ref>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="Script" referent="RBX03F05596EF8A46D5933D5C69EBEC41BE">
+			<Item class="Script" referent="RBXD6717A35144F45AF98645BC3CBD9FFDD">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<bool name="Disabled">false</bool>
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">DevProductServer</string>
-					<string name="ScriptGuid">{E6F52B3A-84BF-4891-8700-43CC3E1A5F27}</string>
+					<string name="ScriptGuid">{2DA691F8-9438-440A-8128-BF7C5E3D9B5C}</string>
 					<ProtectedString name="Source"><![CDATA[local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
  
@@ -116,12 +116,12 @@ MarketplaceService.ProcessReceipt = function(receiptInfo)
 end]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
-				<Item class="ModuleScript" referent="RBXAAB4288B2E8045F487ED4FE29A61133E">
+				<Item class="ModuleScript" referent="RBX0D00C05B874C4D249BDA8F08C67FD93C">
 					<Properties>
 						<BinaryString name="AttributesSerialize"></BinaryString>
 						<Content name="LinkedSource"><null></null></Content>
 						<string name="Name">1070882683</string>
-						<string name="ScriptGuid">{DB977583-52F3-4E50-B499-74AD353D1918}</string>
+						<string name="ScriptGuid">{DB62B3C5-1ACE-4098-9287-6F67B969861C}</string>
 						<ProtectedString name="Source"><![CDATA[local DevProduct = function(receipt, player)
 	player.leaderstats.Money.Value = player.leaderstats.Money.Value + 100
 end
@@ -132,13 +132,13 @@ return DevProduct
 					</Properties>
 				</Item>
 			</Item>
-			<Item class="Script" referent="RBX4F13DCC4F4704E2FB874DF6D5D075706">
+			<Item class="Script" referent="RBX920B73F61F4D4D35965D9946C38BBDC1">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<bool name="Disabled">false</bool>
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">leaderstats</string>
-					<string name="ScriptGuid">{B849B7F0-0BCF-46E2-8206-FFEA6B13ADBB}</string>
+					<string name="ScriptGuid">{B4BCD9F6-1E5F-49D4-B284-4E549F8BFA39}</string>
 					<ProtectedString name="Source"><![CDATA[game.Players.PlayerAdded:Connect(function(p)
 	
 	local leaderstats = Instance.new("Folder")
@@ -154,7 +154,7 @@ end)]]></ProtectedString>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Model" referent="RBXE163A2558186487B9B68F116CE594A6F">
+		<Item class="Model" referent="RBXFFBF30D7A1394E60B33ABA9657A93B04">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<token name="LevelOfDetail">0</token>
@@ -196,7 +196,7 @@ end)]]></ProtectedString>
 				<Ref name="PrimaryPart">null</Ref>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="ScreenGui" referent="RBX8FB384AF47DF479FBFDF926D90421005">
+			<Item class="ScreenGui" referent="RBX97CB3777320C4B478DCCDF072927B291">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<bool name="AutoLocalize">true</bool>
@@ -209,7 +209,7 @@ end)]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 					<token name="ZIndexBehavior">1</token>
 				</Properties>
-				<Item class="TextButton" referent="RBXA0B8E1B2F01F4453AC2888E77F2A8DC1">
+				<Item class="TextButton" referent="RBXFE43AA2CE35740449375DCF725083384">
 					<Properties>
 						<bool name="Active">true</bool>
 						<Vector2 name="AnchorPoint">
@@ -286,13 +286,13 @@ end)]]></ProtectedString>
 						<bool name="Visible">true</bool>
 						<int name="ZIndex">1</int>
 					</Properties>
-					<Item class="LocalScript" referent="RBX96803BF71DF54D4A9693F2F689C25B57">
+					<Item class="LocalScript" referent="RBXE5AEF336B3DC49F69BDC5774F4EEEFBF">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
 							<bool name="Disabled">false</bool>
 							<Content name="LinkedSource"><null></null></Content>
 							<string name="Name">LocalScript</string>
-							<string name="ScriptGuid">{5C7CD52F-C70F-4BF4-94AE-CD0FC1CF77A8}</string>
+							<string name="ScriptGuid">{AB76E67C-AE8C-4A4D-81BD-91D5C5575DA5}</string>
 							<ProtectedString name="Source"><![CDATA[local PRODUCT_ID = 1070882683
 
 local MarketplaceService = game:GetService("MarketplaceService")
