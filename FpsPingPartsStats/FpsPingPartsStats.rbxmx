@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Model" referent="RBX425F2D16956E459298DA8BA9710E4B74">
+	<Item class="Model" referent="RBXABD55285F8F4466DA5EA51FBBC6B9A4A">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<token name="LevelOfDetail">0</token>
@@ -44,7 +44,7 @@
 			<Ref name="PrimaryPart">null</Ref>
 			<BinaryString name="Tags"></BinaryString>
 		</Properties>
-		<Item class="Model" referent="RBX010B285E3D794E76928BEA304775904E">
+		<Item class="Model" referent="RBX944AA77632B74EA3B7C80083D6CF6515">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<token name="LevelOfDetail">0</token>
@@ -86,13 +86,13 @@
 				<Ref name="PrimaryPart">null</Ref>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="Script" referent="RBXADD33712B86A49E08AB308C29743BB57">
+			<Item class="Script" referent="RBX3F262918BABF493FB5577A03C285B439">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<bool name="Disabled">false</bool>
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">Ping</string>
-					<string name="ScriptGuid">{DB87B442-AB20-41C9-A268-49B3B4519660}</string>
+					<string name="ScriptGuid">{20A44F65-2B3D-4D22-BEF9-668C757F5DD0}</string>
 					<ProtectedString name="Source"><![CDATA[-- // Variables \\ --
 
 local RemoteEvent = game.ReplicatedStorage.Ping
@@ -106,7 +106,7 @@ end]]></ProtectedString>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Model" referent="RBX473800AB355B47A49D9233755FB93E50">
+		<Item class="Model" referent="RBXF125BD4E46554D27B8CF4C469B551B1F">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<token name="LevelOfDetail">0</token>
@@ -148,7 +148,7 @@ end]]></ProtectedString>
 				<Ref name="PrimaryPart">null</Ref>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="ScreenGui" referent="RBXA6DA66DD8DA74488B0B43C22224ACDDE">
+			<Item class="ScreenGui" referent="RBX95E94118186E4E419535CF521AFFA971">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<bool name="AutoLocalize">true</bool>
@@ -161,7 +161,7 @@ end]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 					<token name="ZIndexBehavior">1</token>
 				</Properties>
-				<Item class="TextLabel" referent="RBX46F4D55C6E4046538EC39FAD291414BA">
+				<Item class="TextLabel" referent="RBX6F87F18D9A374FD9809CC38BB2EFE3D6">
 					<Properties>
 						<bool name="Active">false</bool>
 						<Vector2 name="AnchorPoint">
@@ -234,13 +234,13 @@ end]]></ProtectedString>
 						<bool name="Visible">true</bool>
 						<int name="ZIndex">1</int>
 					</Properties>
-					<Item class="LocalScript" referent="RBXF87B47D3E7464771A93DF31F51D2A754">
+					<Item class="LocalScript" referent="RBX6CE7DEF0048D4881BB3C8A76AF26E4AF">
 						<Properties>
 							<BinaryString name="AttributesSerialize"></BinaryString>
 							<bool name="Disabled">false</bool>
 							<Content name="LinkedSource"><null></null></Content>
 							<string name="Name">LocalScript</string>
-							<string name="ScriptGuid">{F20EEB41-E7E9-4C7B-AE83-032B43FA2FA3}</string>
+							<string name="ScriptGuid">{D843A95F-7EB3-4464-A8FF-6A7FCDA92ED9}</string>
 							<ProtectedString name="Source"><![CDATA[-- // Settings \\ --
 
 local UPDATE_DELAY = 1
@@ -286,7 +286,7 @@ end]]></ProtectedString>
 				</Item>
 			</Item>
 		</Item>
-		<Item class="Model" referent="RBXDC0A91D6176F487891CAFFFE7198468E">
+		<Item class="Model" referent="RBXD85DB9AFCAAE437AB4D27BB95B5FF410">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<token name="LevelOfDetail">0</token>
@@ -328,7 +328,7 @@ end]]></ProtectedString>
 				<Ref name="PrimaryPart">null</Ref>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="RemoteFunction" referent="RBX6A9D52814F9243CE9CB81E25A7007266">
+			<Item class="RemoteFunction" referent="RBX803F031184CD43578B52E22072123712">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">Ping</string>
