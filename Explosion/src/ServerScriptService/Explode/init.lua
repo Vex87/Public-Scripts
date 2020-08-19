@@ -9,7 +9,7 @@ local function TweenScale(Info)
 	local PrimaryCFrame = Primary.CFrame
 	
 	local ExplodeTweenInfo = TweenInfo.new(Info.Duration, Info.ExplodeTweenInfo.EasingStyle, Info.ExplodeTweenInfo.EasingDirection)
-	local FadeTweennInfo = TweenInfo.new(Info.Duration * Info.FadeTweenInfo.DurationMultiplier, Info.FadeTweenInfo.EasingStyle, Info.FadeTweenInfo.EasingDirection)
+	local FadeTweennInfo = TweenInfo.new(Info.FadeDuration, Info.FadeTweenInfo.EasingStyle, Info.FadeTweenInfo.EasingDirection)
 	
 	for _,Part in pairs(Core.Get(Model, "BasePart")) do
 		Core.NewThread(function()
@@ -53,6 +53,7 @@ local function CreateExplosionEffect(Info)
 	Effect.BlastRadius = Info.BlastRadius
 	Effect.Position = Info.NewExplosion.PrimaryPart.Position	
 	Effect.ExplosionType = Info.ExplosionType
+	Effect.Visible = false
  
 	Effect.Hit:Connect(function(Part, Dist)
 		local Hum = Part.Parent:FindFirstChild("Humanoid")
@@ -82,7 +83,8 @@ Explode.Start = function(OldInfo)
 		Position = Vector3.new(0, 0, 0),
 		ShakeDist = 20,
 		Size = 200,	
-		Duration = 1.2,
+		Duration = 1,
+		FadeDuration = 0.8,
 		DespawnDelay = 0.5,
 		
 		MaxDamage = 100,	
@@ -102,7 +104,6 @@ Explode.Start = function(OldInfo)
 		FadeTweenInfo = {
 			EasingStyle = Enum.EasingStyle.Exponential,
 			EasingDirection = Enum.EasingDirection.In,
-			DurationMultiplier = 0.8,
 		}		
 	}
 	
