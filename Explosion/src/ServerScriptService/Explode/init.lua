@@ -3,31 +3,6 @@ local Debris = game:GetService("Debris")
 local TweenService = game:GetService("TweenService")
 local Core = require(5584659207)
 
-Explode.DefaultInfo = {	
-	
-	ExplosionModel = game.ServerStorage.Effects.Explosion,		
-	
-	NewExplosion = nil,
-	Parent = workspace.Debris,
-	Position = Vector3.new(0, 0, 0),
-	ShakeDist = 20,
-	Size = 250,	
-	Duration = 2,
-	DespawnDelay = 2,
-	
-	ExplodeTweenInfo = {
-		EasingStyle = Enum.EasingStyle.Exponential,
-		EasingDirection = Enum.EasingDirection.Out,
-	},
-	
-	FadeTweenInfo = {
-		EasingStyle = Enum.EasingStyle.Exponential,
-		EasingDirection = Enum.EasingDirection.In,
-		DurationMultiplier = 0.8,
-	}
-	
-}
-
 local function TweenScale(Info)
 	local Model = Info.NewExplosion
 	local Primary = Model.PrimaryPart
@@ -53,9 +28,9 @@ local function TweenScale(Info)
 		end)
 	end
 	
-	wait(Info.DespawnDelay + Info.Duration)
-	Model:Destroy()	
-	
+	Info.NPC:BreakJoints()	
+	wait(Info.Duration + Info.DespawnDelay)	
+	Model:Destroy()		
 end
 
 local function AddShake(Info)
@@ -70,32 +45,77 @@ local function AddShake(Info)
 	end
 end
 
+local function CreateExplosionEffect(Info)
+	local ModelsHit = {}
+	local Effect = Instance.new("Explosion")
+	Effect.BlastPressure = Info.BlastPressure
+	Effect.DestroyJointRadiusPercent = Info.DestroyJointRadiusPercent
+	Effect.BlastRadius = Info.BlastRadius
+	Effect.Position = Info.NewExplosion.PrimaryPart.Position	
+	Effect.ExplosionType = Info.ExplosionType
+ 
+	Effect.Hit:Connect(function(Part, Dist)
+		local Hum = Part.Parent:FindFirstChild("Humanoid")
+		if Hum and not ModelsHit[Hum.Parent] then 			
+			ModelsHit[Hum.Parent] = true
+			local DistFactor = Dist / Effect.BlastRadius
+			DistFactor = 1 - DistFactor
+			Hum:TakeDamage(Info.MaxDamage * DistFactor)
+		end
+	end)
+ 
+	Effect.Parent = Info.NewExplosion.PrimaryPart
+end
+
 local function CreateExplosion(Info)
 	Info.NewExplosion = Info.ExplosionModel:Clone()
 	Info.NewExplosion.Parent = Info.Parent
-	Info.NewExplosion:MoveTo(Info.Position)
+	Info.NewExplosion:MoveTo(Info.Position)	
+	CreateExplosionEffect(Info)
 end
 
-local function CheckInfoChanges(NewInfo)	
-	if NewInfo then
-		for i,v in pairs(Explode.DefaultInfo) do
-			if not NewInfo[i] then
-				NewInfo[i] = v
-			end
-		end	
-	else
-		NewInfo = Explode.DefaultInfo
+Explode.Start = function(OldInfo)
+	
+	local Info = {
+		ExplosionModel = game.ServerStorage.Effects.Explosion,				
+		Parent = workspace.Debris,
+		Position = Vector3.new(0, 0, 0),
+		ShakeDist = 20,
+		Size = 200,	
+		Duration = 1.2,
+		DespawnDelay = 0.5,
+		
+		MaxDamage = 100,	
+		BlastRadius = 15,	
+		DestroyJointRadiusPercent = 0,
+		BlastPressure = 500000,
+		ExplosionType = Enum.ExplosionType.NoCraters,
+		
+		NewExplosion = nil,	
+		NPC = nil,			
+		
+		ExplodeTweenInfo = {
+			EasingStyle = Enum.EasingStyle.Exponential,
+			EasingDirection = Enum.EasingDirection.Out,
+		},
+		
+		FadeTweenInfo = {
+			EasingStyle = Enum.EasingStyle.Exponential,
+			EasingDirection = Enum.EasingDirection.In,
+			DurationMultiplier = 0.8,
+		}		
+	}
+	
+	if OldInfo then
+		for i,v in pairs(OldInfo) do
+			Info[i] = v			
+		end
 	end
 	
-	return NewInfo
-end
-
-Explode.Start = function(OldInfo)	
-	local Info = CheckInfoChanges(OldInfo)	
 	CreateExplosion(Info)
 	AddShake(Info)
 	Info.NewExplosion.PrimaryPart.Sound:Play()
-	TweenScale(Info)
+	TweenScale(Info)	
 end
 
 return Explode

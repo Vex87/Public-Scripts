@@ -11,6 +11,11 @@
       "$className": "ServerScriptService",
       "$ignoreUnknownInstances": true,
       "$path": "src/ServerScriptService"
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$ignoreUnknownInstances": true,
+      "$path": "src/Workspace"
     }
   }
 }
