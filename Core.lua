@@ -68,6 +68,17 @@ function Core.NewThread(func,...)
 	a(...)
 end
 
+function Core.CloneTable(OriginalTable)
+	local copy = {}
+	for k, v in pairs(OriginalTable) do
+		if type(v) == "table" then
+			v = Core.CloneTable(v)
+		end
+		copy[k] = v
+	end
+	return copy
+end
+
 function Core.TableRemove(Table, Value, RemoveCount)		
 	local Count = 0
 	
