@@ -1,7 +1,8 @@
 # Scripts
 
 ## Table of Contents
-- [Core](#core)
+- [Core (Basic Functions)](https://github.com/Vex87/Public-Scripts#core-basic-functions)
+- [Core (Custom Events)](https://github.com/Vex87/Public-Scripts#core-custom-events)
 
 ## Core (Basic Functions)
 
